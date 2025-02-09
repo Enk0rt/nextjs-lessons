@@ -12,4 +12,7 @@ export const services = {
         const {data} =  await axiosInstance.get<T>(urls.cars)
         return data
     },
+    addCar: async <T>(data:T) => {
+        await axiosInstance.post(urls.cars, data)
+    }
 };
